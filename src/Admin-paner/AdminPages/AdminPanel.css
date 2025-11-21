@@ -1,0 +1,37 @@
+/* Sidebar */
+.sidebar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #333;
+}
+
+.sidebar h3 {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+  list-style: none;
+  font-size: 17px;
+}
+.sidebar ul li a:hover{
+  color:  orangered;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; 
+}
+

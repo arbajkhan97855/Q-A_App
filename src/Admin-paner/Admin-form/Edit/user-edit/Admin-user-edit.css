@@ -1,0 +1,90 @@
+/* 🌌 पृष्ठभूमि और लेआउट */
+#admin-u-edit {
+    background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* 📝 फॉर्म कंटेनर */
+  #admin-u-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* 🧾 हेडिंग */
+  #admin-u-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  /* 🏷️ लेबल्स */
+  #admin-u-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  /* 🖊️ इनपुट फ़ील्ड्स */
+  #admin-u-container input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  #admin-u-container input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* ✅ सबमिट बटन */
+  #admin-u-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #admin-u-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 📱 उत्तरदायी डिज़ाइन */
+  @media (max-width: 600px) {
+    #admin-u-container {
+      padding: 20px;
+    }
+  
+    #admin-u-container h2 {
+      font-size: 20px;
+    }
+  
+    #admin-u-container input,
+    #admin-u-container button {
+      font-size: 14px;
+    }
+  }
+  

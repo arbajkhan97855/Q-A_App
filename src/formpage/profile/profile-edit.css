@@ -1,0 +1,106 @@
+/* profile-edit.css */
+
+/* Container for the entire page */
+#edit-main {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1517676766972-004f780059f3?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg2MXwwfDF8c2VhY2h8Mnx8fGJhY2tncm91bmR8ZW58MHx8fHwxNjE4NjAzNzc&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+/* Form container */
+#edit-form {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation for the form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading styling */
+#edit-form h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Input fields styling */
+#edit-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus state for inputs */
+#edit-form input:focus {
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  background-color: #007bff18;
+}
+
+/* Button styling */
+#edit-form button {
+  width: 100%;
+  padding: 13px;
+  background-color: #007bffbd;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#edit-form button:first-of-type {
+  background-color: #333;
+}
+
+#edit-form button:hover {
+  background-color: #007bff;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  #edit-form {
+    padding: 25px 20px;
+    border-radius: 14px;
+  }
+
+  #edit-form input, button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #edit-form h3 {
+    font-size: 22px;
+  }
+}

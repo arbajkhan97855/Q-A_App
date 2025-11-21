@@ -1,0 +1,189 @@
+/* header.css */
+
+#mean-cont {
+  font-family: 'Poppins', sans-serif;
+  position: sticky;
+  top: 0px;
+  z-index: 99999999;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9999999999;
+}
+
+/* Logo image as profile pic */
+.logo img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Nav links */
+nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffe600;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Profile popup */
+#profile-main {
+  display: none;
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.profile-container {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.profile-container p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.profile-container i {
+  cursor: pointer;
+  color: #555;
+  transition: 0.2s;
+}
+
+.profile-container i:hover {
+  color: red;
+}
+
+/* Profile image */
+.profile-container .img img {
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+}
+
+/* Profile details */
+#profile-detail h5 {
+  margin: 5px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+/* Button */
+.profile-container .button button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-container .button button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #profile-main {
+    width: 90%;
+    right: 5%;
+    top: 75px;
+  }
+
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-container p {
+    font-size: 14px;
+  }
+
+  #profile-detail h5 {
+    font-size: 18px;
+  }
+
+  .profile-container .button button {
+    width: 100%;
+  }
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

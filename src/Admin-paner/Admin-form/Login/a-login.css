@@ -1,0 +1,78 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Full screen background */
+  #a-login-main {
+    height: 100vh;
+    width: 100%;
+    background: url("https://images.unsplash.com/photo-1607746882042-944635dfe10e") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Login box */
+  #a-login-top {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Form heading */
+  #a-login-top h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Inputs */
+  #a-login-top input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  #a-login-top input:focus {
+    border-color: #667eea;
+    outline: none;
+  }
+  
+  /* Submit button */
+  #a-login-top button {
+    width: 100%;
+    padding: 12px;
+    background-color: #667eea;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #a-login-top button:hover {
+    background-color: #5a67d8;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 500px) {
+    #a-login-top {
+      padding: 2rem 1rem;
+    }
+  }
+  

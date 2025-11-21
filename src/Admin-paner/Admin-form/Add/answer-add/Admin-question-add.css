@@ -1,0 +1,108 @@
+/* singup.css */
+
+#add-q-main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  #add-q-top {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    animation: slideFade 0.5s ease-in-out;
+  }
+  
+  @keyframes slideFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+#add-q-top h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+#add-q-top input,
+#add-q-top textarea  {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: #fff;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+#add-q-top input:focus {
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    background-color: #007bff18;
+  }
+  #add-q-top textarea:focus {
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    background-color: #007bff18;
+  }
+  
+#add-q-top button {
+    width: 100%;
+    padding: 13px;
+    background-color: #007bffbd;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+  
+#add-q-top button:first-of-type {
+    background-color: #333;
+  }
+  
+#add-q-top button:hover {
+    background-color: #007bfff6;
+  }
+  
+#add-q-top button:active {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 480px) {
+  #add-q-top {
+      padding: 25px 20px;
+      border-radius: 14px;
+    }
+  
+  #add-q-top input, button,textarea  {
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+  #add-q-top h3 {
+      font-size: 22px;
+    }
+  }
+  
