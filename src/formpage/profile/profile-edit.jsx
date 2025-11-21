@@ -11,8 +11,6 @@ export const ProEdit = () =>{
           const [myemail ,  setmyemail] = useState("");
           const [mynumber ,  setmynumber] = useState();
           const [mypassword ,  setmypassword] = useState("");
-          const [myimage ,  setmyimage] = useState("");
-
           const [Userapii,setuserapii] = useState([])
 
           const nextpage = useNavigate()
@@ -34,8 +32,8 @@ export const ProEdit = () =>{
              body : JSON.stringify({"username" : myusername ? myusername : Userapii.username,
                               "email" :  myemail? myemail : Userapii.email,
                               "number" :  mynumber ? mynumber : Userapii.numbe, 
-                              "password" : mypassword ? mypassword : Userapii.password, 
-                              "useimage" : myimage ? myimage : Userapii.useimage}),
+                              "password" : mypassword ? mypassword : Userapii.password
+                               }),
              headers: {
                  "Content-Type": "application/json",
                }
@@ -63,8 +61,6 @@ export const ProEdit = () =>{
             <input type="number" placeholder="enter number" id="number" onChange={(e)=>{setmynumber(e.target.value)}}/>
             <br/>
             <input type="password" placeholder="enter password" id="password" onChange={(e)=>{setmypassword(e.target.value)}}/>
-            <br/>
-            <input type="url" placeholder="enter image" id="image" onChange={(e)=>{setmyimage(e.target.value)}}/>
             <br/>
             <button onClick={Editapi}>Edit data</button>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './header.css';
 import { Link, useNavigate } from 'react-router-dom';
+import Profile_Avatar from "../../assets/avatar.jpeg"
 
 const Header = () => {
    const [profileapi,setprofileapi] = useState([])
@@ -51,7 +52,7 @@ const Header = () => {
     <>
     <div id='mean-cont'>
     <header>
-      <div className="logo" onClick={ShowProfile}><img src={profileapi.useimage} alt="" /></div>
+      <div className="logo" onClick={ShowProfile}><img src={Profile_Avatar} alt="" /></div>
       <div className="menu-toggle" id="menu-toggle" ref={toggleRef}>&#9776;</div>
       <nav id="nav" ref={navRef}>
         <Link to={'/jsquestion'}>Java Script</Link>
@@ -67,7 +68,7 @@ const Header = () => {
     <div id='profile-main'>
     <div className='profile-container'>
       <p><span>id:-{profileapi._id}</span> <i class="fa-solid fa-x" onClick={HideProfile}></i></p>
-      <div className='img'><img src={profileapi.useimage} height="100px" width="100px"/></div>
+      <div className='img'><img src={Profile_Avatar} height="100px" width="100px"/></div>
       <div id='profile-detail'>
       <h5>Name : {profileapi.username}</h5>
       <h5>Email : {profileapi.email}</h5>

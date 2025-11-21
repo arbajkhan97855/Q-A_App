@@ -45,7 +45,6 @@ export function AdminUserPage() {
                                     <th>Email</th>
                                     <th>Number</th>
                                     <th>Password</th>
-                                    <th>Image</th>
                                     <th>Edit</th>
                                     <th>Delete</th>
                                 </tr>
@@ -58,7 +57,6 @@ export function AdminUserPage() {
                                         <td>{item.email}</td>
                                         <td>{item.number}</td>
                                         <td>{item.password}</td>
-                                        <td><img src={item.useimage} height="40px" width="40px" alt="#" /></td>
                                         <td><button id="edit-btn"><Link to={`/admin-user/${item._id}`}>Edit</Link></button></td>
                                         <td><button id="delete-btn" onClick={()=>{DeleteUser(item._id)}}>Delete</button></td>
                                     </tr>

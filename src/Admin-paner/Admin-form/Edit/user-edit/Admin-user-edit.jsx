@@ -10,7 +10,6 @@ export function EditUserPage() {
     email: "",
     number: "",
     password: "",
-    useimage: "",
   });
 
   useEffect(() => { 
@@ -21,7 +20,6 @@ export function EditUserPage() {
     
   }, [userid]);
 
-  // हैंडल इनपुट चेंज
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -30,11 +28,10 @@ export function EditUserPage() {
     }));
   };
 
-  // हैंडल फॉर्म सबमिट
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(`https://exampapae-api.vercel.app/users/${userid}`, {
-      method: "PATCH", // "PATCH" bhi kar skte ho
+      method: "PATCH", 
       headers: {
         "Content-Type": "application/json",
       },
@@ -86,12 +83,7 @@ export function EditUserPage() {
           onChange={handleChange}
           type="password"
         />
-        <label>Useimage:</label>
-        <input
-          name="useimage"
-          value={formData.useimage}
-          onChange={handleChange}
-        />
+        
         <button type="submit">Update</button>
       </form>
     </div>

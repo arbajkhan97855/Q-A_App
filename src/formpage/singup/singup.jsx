@@ -9,15 +9,13 @@ export function Singuppage(){
       const [myemail ,  setmyemail] = useState("");
       const [mynumber ,  setmynumber] = useState();
       const [mypassword ,  setmypassword] = useState("");
-      const [myimage ,  setmyimage] = useState("");
-
       const nextpage = useNavigate()
       
       async function Singupapi(e) {
                 e.preventDefault();
                 const apiurl = await fetch("https://exampapae-api.vercel.app/users",{
                     method:"POST",
-                    body : JSON.stringify({"username" : myusername, "email" : myemail, "number" : mynumber , "password" : mypassword , "useimage" : myimage}),
+                    body : JSON.stringify({"username" : myusername, "email" : myemail, "number" : mynumber , "password" : mypassword}),
                     headers: {
                         "Content-Type": "application/json",
                       }
@@ -46,8 +44,7 @@ export function Singuppage(){
             <br/>
             <input type="password" placeholder="enter a strong password ex:@Ajk56 8 digit" id="password" autoComplete='current-password' onChange={(e)=>{setmypassword(e.target.value)}} required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}"/>
             <br/>
-            <input type="url" placeholder="enter image" id="image" onChange={(e)=>{setmyimage(e.target.value)}} required/>
-            <br/>
+
             <button type="submit" >Singup</button>
             <button onClick={()=>{setTimeout(()=>{nextpage('/')},4000)}}  >BACK</button>
         </form>
