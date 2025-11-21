@@ -13,7 +13,12 @@ export function Singuppage(){
       
       async function Singupapi(e) {
                 e.preventDefault();
-                const apiurl = await fetch("https://exampapae-api.vercel.app/users",{
+                 const emailapiurl = await fetch("https://exampapae-api.vercel.app/users")
+                 const convertdata = await emailapiurl.json();
+                 const finddata =  convertdata.find((data) => data.email == myemail);
+
+                 if(!finddata){
+                     const apiurl = await fetch("https://exampapae-api.vercel.app/users",{
                     method:"POST",
                     body : JSON.stringify({"username" : myusername, "email" : myemail, "number" : mynumber , "password" : mypassword}),
                     headers: {
@@ -27,6 +32,10 @@ export function Singuppage(){
                 }).catch(()=>{
                    toast.error("network error")
                 })
+             }else{
+                toast.error("email is already create account, try new email")
+             }
+                
       
     }
      

@@ -8,7 +8,6 @@ import Footer from "../../pages/Footerpage/footer";
 
 export const ProEdit = () =>{
     const [myusername, setmysername] =  useState("");
-          const [myemail ,  setmyemail] = useState("");
           const [mynumber ,  setmynumber] = useState();
           const [mypassword ,  setmypassword] = useState("");
           const [Userapii,setuserapii] = useState([])
@@ -30,7 +29,7 @@ export const ProEdit = () =>{
             const apiurl = await fetch(`https://exampapae-api.vercel.app/users/${userid}`,{
              method:"PATCH",
              body : JSON.stringify({"username" : myusername ? myusername : Userapii.username,
-                              "email" :  myemail? myemail : Userapii.email,
+                              "email" : Userapii.email,
                               "number" :  mynumber ? mynumber : Userapii.numbe, 
                               "password" : mypassword ? mypassword : Userapii.password
                                }),
@@ -55,8 +54,6 @@ export const ProEdit = () =>{
         <div  id="edit-form">
             <h3>Edit Now</h3>
             <input type="text" placeholder="enter usernaame" id="Username" onChange={(e)=>{setmysername(e.target.value)}}/>
-            <br/>
-            <input type="email" placeholder="enter email" id="email" onChange={(e)=>{setmyemail(e.target.value)}}/>
             <br/>
             <input type="number" placeholder="enter number" id="number" onChange={(e)=>{setmynumber(e.target.value)}}/>
             <br/>
